@@ -36,28 +36,6 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
-.nav-link{
-    color: white;
-}
-
-.nav-item{
-    font-weight: 600;
-    font-size: 1em;
-    background-color: rgb(0, 0, 0);
-}
-
-
-
-#seccion{
-    display: grid;
-    background-color: rgba(0, 0, 0, 0.506);
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    "anterior partidos siguiente"
-    "tabla tabla tabla";
-}
 
 .back{
     height: 60px;
