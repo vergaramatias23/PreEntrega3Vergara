@@ -1,0 +1,65 @@
+main{
+    section{
+        display: grid;
+        background-color: $background-color-principal;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: 
+        "anterior partidos siguiente"
+        "tabla tabla tabla";
+        a{
+            font-size: .7em;
+            img{
+                height: 30px;
+            }
+        }
+        table{
+            width: 90%;
+            background-color: #121212;
+            grid-area: tabla;
+            tr{
+                .cabecera{
+                    font-weight: 500;
+                    font-size: 1em;
+                    text-align: center;
+                    color: white;
+                }
+                td{
+                        border: 1px solid rgb(77, 77, 77);
+                        color: white;
+                        text-align: center;
+                        font-size: .9em;
+                        font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.anterior{
+    grid-area: anterior;
+}
+
+.partidos-fecha{
+    color: white;
+    font-size: .9em;
+    justify-content: center;
+    align-content: center;
+    grid-area: partidos;
+}
+
+.partidos-fecha, a:link, a:visited, a:active{
+    text-decoration: none;
+    color: white;
+}
+
+.siguiente{
+    grid-area: siguiente;
+}
+
+
+.goles{
+    background-color: white;
+    color: black;
+}

@@ -1,210 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+.pagina-principal {
+  background-image: url("../../img/corner.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.champions {
+  background-image: url("../../img/fondo-champions.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-body, html{
-    height: 100%;
-}
+.qatar {
+  background-image: url("../../img/fondo-qatar2022.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-body{
-    height: 100%;
-    background-image: url(../img/corner.jpeg);
-    background-repeat:repeat-y;
-    background-size: cover;
-}
-.header-container{
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.448);
-}
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.5); }
+  header h1 {
+    justify-content: flex-start; }
+    header h1 a .logo {
+      width: 130px;
+      padding: 15px; }
 
-.logo{
-    width: 120px;
-    padding: 15px;
-}
+.navbar {
+  flex-direction: row-reverse; }
+  .navbar .navbar-toggler {
+    background-color: white; }
 
-.navbar{
-    flex-direction: row-reverse;
-}
+.nav-item {
+  font-weight: 600;
+  font-size: 1em;
+  background-color: black; }
+  .nav-item .nav-link {
+    color: white; }
 
-.navbar-toggler{
-    background-color: rgb(255, 255, 255);
-}
-
-
-.back{
-    height: 60px;
-}
-
-.anterior{
-    font-size: .7em;
-}
-
-.siguiente{
-    font-size: .7em;
-}
-
-.next{
-    height: 60px;
-}
-
-.anterior{
-    grid-area: anterior;
-}
-
-.partidos-fecha{
-    color: white;
-    font-size: .9em;
-    justify-content: center;
-    align-content: center;
-    grid-area: partidos;
-}
-
-.partidos-fecha, a:link, a:visited, a:active{
-    text-decoration: none;
-    color: white;
-}
-
-.siguiente{
-    grid-area: siguiente;
-}
-
-
-table{
+main section {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "anterior partidos siguiente" "tabla tabla tabla"; }
+  main section a {
+    font-size: .7em; }
+    main section a img {
+      height: 30px; }
+  main section table {
     width: 90%;
     background-color: #121212;
-    grid-area: tabla;
-}
+    grid-area: tabla; }
+    main section table tr .cabecera {
+      font-weight: 500;
+      font-size: 1em;
+      text-align: center;
+      color: white; }
+    main section table tr td {
+      border: 1px solid #4d4d4d;
+      color: white;
+      text-align: center;
+      font-size: .9em;
+      font-weight: 400; }
 
+.anterior {
+  grid-area: anterior; }
 
-table, tr, th, td{
-    border: 1px solid rgb(77, 77, 77);
-    color: white;
-    text-align: center;
-    font-size: .9em;
-    font-weight: 400;
-}
+.partidos-fecha {
+  color: white;
+  font-size: .9em;
+  justify-content: center;
+  align-content: center;
+  grid-area: partidos; }
 
-.cabecera{
-    font-weight: 500;
-    font-size: 1.1em;
-}
+.partidos-fecha, a:link, a:visited, a:active {
+  text-decoration: none;
+  color: white; }
 
-.goles{
-    background-color: white;
-    color: black;
-}
+.siguiente {
+  grid-area: siguiente; }
 
-.aside{
-    background-color: rgba(0, 0, 0, 0.502);
-    width: 100%;
-    overflow: hidden;
-}
+.goles {
+  background-color: white;
+  color: black; }
 
-.seccion-novedades{
+aside {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 20px; }
+  aside hr {
+    height: 4px;
+    width: 50%;
+    margin-left: 25%;
+    background-color: white; }
+  aside div {
+    background-color: rgba(0, 0, 0, 0.498); }
+    aside div h2 {
+      font-size: 1.3em;
+      color: white;
+      font-family: "montserrat";
+      font-weight: 700;
+      text-align: center;
+      padding: 10px; }
+  aside div {
     display: flex;
-    justify-content: space-around;
-}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    aside div a img {
+      width: 100%; }
+    aside div p {
+      font-size: 1em;
+      color: white;
+      font-family: "montserrat";
+      font-weight: 500;
+      text-align: left;
+      letter-spacing: .8px;
+      padding-top: 5px;
+      margin-left: 10px; }
 
-.novedades{
-    margin: 10px;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2em;
-    font-weight: 600;
-    text-decoration: underline;
-}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0 5px 0 5px; }
+  footer .container-contacto {
+    justify-content: center; }
 
-.novedad-principal{
-    align-items: center;
-    background-color: black;
-}
+.logo {
+  width: 130px;
+  padding: 15px; }
 
+fieldset label input {
+  width: 100%; }
 
-.relleno{
-    margin: 0 0 10px 10px;
-    font-size: .7em;
-    color: white;
-    text-align: left;
-}
-
-.img{
-    width: 100%;
-}
-
-footer{
-    display: flex;
-    text-align: center;
-    background-color: #00000089;
-    padding: 0.5em;
-}
-
-.contenedor-footer{
-    width: 100%;
-}
-
-.contacto{
-    color: #ffff;
-}
-
-.redes{
-    width: 30px;
-}
-
-
-fieldset, label, span{
-    overflow: hidden;
-    color: white;
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-fieldset, label, input{
-    width: 100%;
-}
-
+fieldset label span {
+  overflow: hidden;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400; }
 
 @media screen and (min-width: 768px) {
-    .novedad-principal{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .img{
-        width: 100%;
-    }
-    h3{
-        font-size: 1.3em;
-        color: white;
-        text-align: center;
-    }
-    
-    .relleno{
-        width: 80%;
-        text-align: center;
-    }
+  .novedad-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .img {
+    width: 100%; }
+  h3 {
+    font-size: 1.3em;
+    color: white;
+    text-align: center; }
+  .relleno {
+    width: 80%;
+    text-align: center; } }
 
-}
-
-@media screen and (min-width: 1024px){
-    .nav-item{
-        background-color: #12121200;
-    }
-
-    .img{
-        width: 100%;
-    }
-/* 
-    .novedad-principal{
-        flex-wrap: nowrap;
-    } */
-
-    .aside{
-        width: 100%;
-    }
-}
+@media screen and (min-width: 1024px) {
+  .nav-item {
+    background-color: #12121200; }
+  .img {
+    width: 100%; }
+  .container-main {
+    display: flex;
+    width: 100%; }
+    .container-main main {
+      width: 70%; }
+      .container-main main section table tr {
+        height: 150px; }
+  aside {
+    width: 30%; }
+    aside .container-aside {
+      width: 90%; }
+      aside .container-aside hr {
+        margin-left: 0; }
+      aside .container-aside .seccion-novedades {
+        width: 100%; }
+  .partidos-fecha {
+    font-size: 1.5em; }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: 15px; }
+    footer .contenedor-footer {
+      margin: 15px; } }

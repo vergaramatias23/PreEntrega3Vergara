@@ -1,0 +1,13 @@
+.navbar {
+    flex-direction: row-reverse; 
+    .navbar-toggler {
+        background-color: white; 
+    }
+}
+.nav-item {
+    font-weight: 600;
+    font-size: 1em;
+    background-color: black; 
+    .nav-link {
+        color: white; }
+}

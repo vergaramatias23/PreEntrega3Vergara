@@ -1,0 +1,32 @@
+aside{
+    background-color: $background-color-principal;
+    padding-top: 20px;
+    hr{
+        height: 4px;
+        width: 50%;
+        margin-left: 25%;
+        background-color: rgb(255, 255, 255);
+    }
+    div{
+        background-color: hsla(0, 0%, 0%, 0.498);
+        h2{
+            // color: $font
+            @include font (1.3em, white, 'montserrat', 700, center);
+            padding: 10px;
+        }
+    }
+    div{
+        @include prop-flex(column,center,center);
+        a{
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            @include font(1em, white, 'montserrat', 500, left);
+            letter-spacing: .8px;
+            padding-top: 5px;
+            margin-left: 10px;
+        }
+    }
+}

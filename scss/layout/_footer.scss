@@ -1,0 +1,14 @@
+footer{
+    @include prop-flex (column, space-between, center);
+    display: flex;
+    padding: 0 5px 0 5px;
+    .container-contacto{
+        justify-content: center;
+    }
+}
+
+
+.logo{
+    width: 130px;
+    padding: 15px;
+}

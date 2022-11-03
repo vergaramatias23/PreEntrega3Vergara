@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    justify-content: space-around; 
+    background-color: $background-color-principal; 
+        h1{
+            justify-content: flex-start;
+            a{
+                .logo{
+                        width: 130px;
+                        padding: 15px;
+                }
+            }
+        }
+}

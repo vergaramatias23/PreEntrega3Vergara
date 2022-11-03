@@ -1,0 +1,47 @@
+@media screen and (min-width: 1024px) {
+  .nav-item {
+    background-color: #12121200; }
+  .img {
+    width: 100%; }
+
+  .container-main{
+    display: flex;
+    width: 100%;
+    main{
+        width: 70%;
+        section{
+          table{
+            tr{
+              height: 150px;
+              }
+            }
+          }
+        }
+      }
+    aside{
+    width: 30%;
+    .container-aside{
+      width: 90%;
+      hr{
+        margin-left: 0;
+      }
+      .seccion-novedades{
+        width: 100%;
+      }
+    }
+  }
+
+  .partidos-fecha{
+    font-size: 1.5em;
+  }
+
+  footer{
+    @include prop-flex(column, space-between, center);
+    display: flex;
+    margin: 15px;
+    .contenedor-footer{
+      margin: 15px;
+    }
+  }
+
+}
