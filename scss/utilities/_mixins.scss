@@ -1,3 +1,15 @@
+@mixin tablet {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+
 @mixin fondo-principal {
         background-image: url("../../img/corner.jpeg");
         background-repeat: no-repeat;
@@ -6,14 +18,20 @@
 
 @mixin fondo-champions {
     background-image: url("../../img/fondo-champions.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
+    background-size:contain;
 }
 
 @mixin fondo-qatar {
     background-image: url("../../img/fondo-qatar2022.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@mixin fondo-libertadores {
+    background-image: url("../../img/fondo-libertadores.jpeg");
+    background-repeat: repeat-y;
+    background-size: contain; 
 }
 
 @mixin font ($font, $color, $family, $ancho, $alineacion){

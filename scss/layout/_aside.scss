@@ -1,11 +1,17 @@
 aside{
     background-color: $background-color-principal;
-    padding-top: 20px;
+    @include tablet{
+        @include prop-flex(column, start, center);
+        margin-top: 10px;
+    }
     hr{
         height: 4px;
         width: 50%;
         margin-left: 25%;
         background-color: rgb(255, 255, 255);
+        @include tablet{
+            width: 100%;
+        }
     }
     div{
         background-color: hsla(0, 0%, 0%, 0.498);
@@ -14,8 +20,13 @@ aside{
             padding: 10px;
         }
     }
-    div{
+    .novedad-principal{
         @include prop-flex(column,center,center);
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+        }
         a{
             img{
                 width: 100%;
@@ -26,6 +37,10 @@ aside{
             letter-spacing: .8px;
             padding-top: 5px;
             margin-left: 10px;
+            @include tablet{
+                width: 80%;
+                text-align: center; 
+            }
         }
     }
 }

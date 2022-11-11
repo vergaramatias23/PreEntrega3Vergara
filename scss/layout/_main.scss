@@ -1,100 +1,135 @@
-main{
-    section{
-        display: grid;
-        background-color: $background-color-principal;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        align-items: center;
-        grid-template-areas: 
-        "anterior partidos siguiente"
-        "tabla tabla tabla"
-        "goleadores goleadores goleadores"
-        ;
-        a{
-            font-size: .7em;
-            img{
-                height: 30px;
+.container-main{
+    background-color: $background-color-principal;
+    main{
+        section{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-template-areas: 
+            "anterior partidos siguiente"
+            "tabla tabla tabla"
+            "goleadores goleadores goleadores"
+            ;
+            a{
+                font-size: .7em;
+                img{
+                    height: 30px;
+                }
             }
-        }
-        table{
-            display: table;
-            width: 90%;
-            background-color: #121212;
-            grid-area: tabla;
-            tr{
-                .cabecera{
-                    font-weight: 500;
-                    font-size: 1em;
-                    text-align: center;
-                    color: white;
-                }
-                .cabecera-goleador{
-                    @extend .cabecera;
-                }
-                td{
-                        border: 1px solid rgb(77, 77, 77);
-                        color: white;
+            table{
+                display: table;
+                width: 90%;
+                background-color: #121212;
+                grid-area: tabla;
+                tr{
+                    .cabecera{
+                        font-weight: 500;
+                        font-size: 1em;
                         text-align: center;
-                        font-size: .9em;
-                        font-weight: 400;
+                        color: white;
+                    }
+                    .cabecera-goleador{
+                        @extend .cabecera;
+                    }
+                    td{
+                            border: 1px solid rgb(77, 77, 77);
+                            color: white;
+                            text-align: center;
+                            font-size: .9em;
+                            font-weight: 400;
+                    }
                 }
             }
         }
     }
-}
 
 
-.goleadores{
-    @extend table;
-    text-align: center;
-    font-size: .9em;
-    font-weight: 700;
-    padding-top: 25px;
-}
-
-.asistencias{
-    @extend .goleadores;
-}
-
-
-.anterior{
-    grid-area: anterior;
-}
-
-.partidos-fecha{
-    padding: 15px 0;
-    color: white;
-    font-size: .9em;
-    text-align: center;
-    grid-area: partidos;
-}
-
-.partidos-fecha, a:link, a:visited, a:active{
-    text-decoration: none;
-    color: white;
-}
-
-.siguiente{
-    grid-area: siguiente;
-}
-
-
-.goles{
-    background-color: white;
-    color: black;
-}
-
-
-#seccion{
-    @include prop-flex(column,center,center);
-    padding: 10px;
-    overflow: hidden;
-    .titulo{
-        @include font(1.2em, white, 'montserrat', 600, center);
+    .goleadores{
+        @extend table;
+        text-align: center;
+        font-size: .9em;
+        font-weight: 700;
+        padding-top: 25px;
     }
-    p{
-        @include font(1.2em, white, 'montserrat', 400, left);
-        padding: 30px;
-        letter-spacing: .4px;
+
+    .asistencias{
+        @extend .goleadores;
+    }
+
+
+    .anterior{
+        grid-area: anterior;
+    }
+
+    .partidos-fecha{
+        padding: 15px 0;
+        color: white;
+        font-size: .9em;
+        text-align: center;
+        grid-area: partidos;
+        @include tablet{
+            font-size: 1.5em;
+        }
+    }
+
+    .partidos-fecha, a:link, a:visited, a:active{
+        text-decoration: none;
+        color: white;
+    }
+
+    .siguiente{
+        grid-area: siguiente;
+    }
+
+
+    .goles{
+        background-color: white;
+        color: black;
+    }
+
+
+    #seccion{
+        @include prop-flex(column,center,center);
+        padding: 10px;
+        overflow: hidden;
+        iframe{
+            @include tablet{
+                padding: 10px;
+                width: 768px;
+                height: 360px;
+            }
+        }
+        .titulo{
+            @include font(1.1em, white, 'montserrat', 900, center);
+            width: 100%;
+            background-color: black;
+            padding: 10px;
+            @include tablet{
+                @include font(1.5em, white, 'montserrat', 900, center);
+            }
+        }
+        .delacruz-mobile{
+            width: 100%;
+            @include tablet{
+                display: none;
+            }
+        }
+
+        .delacruz-desktop{
+            display: none;
+            @include tablet{
+                display: block;
+                width: 100%;
+            }
+        }
+        p{
+            @include font(1em, white, 'montserrat', 400, left);
+            padding: 10px;
+            letter-spacing: .4px;
+            @include tablet{
+                @include font (1.2, white, 'montserrat', 600, left);
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 footer{
     @include prop-flex (column, space-between, center);
     display: flex;
+    background-color: $background-color-principal;
     padding: 0 5px 0 5px;
     .container-contacto{
         justify-content: center;
