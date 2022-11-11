@@ -7,7 +7,9 @@ main{
         align-items: center;
         grid-template-areas: 
         "anterior partidos siguiente"
-        "tabla tabla tabla";
+        "tabla tabla tabla"
+        "goleadores goleadores goleadores"
+        ;
         a{
             font-size: .7em;
             img{
@@ -15,6 +17,7 @@ main{
             }
         }
         table{
+            display: table;
             width: 90%;
             background-color: #121212;
             grid-area: tabla;
@@ -24,6 +27,9 @@ main{
                     font-size: 1em;
                     text-align: center;
                     color: white;
+                }
+                .cabecera-goleador{
+                    @extend .cabecera;
                 }
                 td{
                         border: 1px solid rgb(77, 77, 77);
@@ -37,15 +43,29 @@ main{
     }
 }
 
+
+.goleadores{
+    @extend table;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 700;
+    padding-top: 25px;
+}
+
+.asistencias{
+    @extend .goleadores;
+}
+
+
 .anterior{
     grid-area: anterior;
 }
 
 .partidos-fecha{
+    padding: 15px 0;
     color: white;
     font-size: .9em;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
     grid-area: partidos;
 }
 
@@ -62,4 +82,19 @@ main{
 .goles{
     background-color: white;
     color: black;
+}
+
+
+#seccion{
+    @include prop-flex(column,center,center);
+    padding: 10px;
+    overflow: hidden;
+    .titulo{
+        @include font(1.2em, white, 'montserrat', 600, center);
+    }
+    p{
+        @include font(1.2em, white, 'montserrat', 400, left);
+        padding: 30px;
+        letter-spacing: .4px;
+    }
 }

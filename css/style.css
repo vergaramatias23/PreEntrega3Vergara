@@ -47,35 +47,42 @@ main section {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  grid-template-areas: "anterior partidos siguiente" "tabla tabla tabla"; }
+  grid-template-areas: "anterior partidos siguiente" "tabla tabla tabla" "goleadores goleadores goleadores"; }
   main section a {
     font-size: .7em; }
     main section a img {
       height: 30px; }
-  main section table {
+  main section table, main section .goleadores, main section .asistencias {
+    display: table;
     width: 90%;
     background-color: #121212;
     grid-area: tabla; }
-    main section table tr .cabecera {
+    main section table tr .cabecera, main section .goleadores tr .cabecera, main section .asistencias tr .cabecera, main section table tr .cabecera-goleador, main section .goleadores tr .cabecera-goleador, main section .asistencias tr .cabecera-goleador {
       font-weight: 500;
       font-size: 1em;
       text-align: center;
       color: white; }
-    main section table tr td {
+    main section table tr td, main section .goleadores tr td, main section .asistencias tr td {
       border: 1px solid #4d4d4d;
       color: white;
       text-align: center;
       font-size: .9em;
       font-weight: 400; }
 
+.goleadores, .asistencias {
+  text-align: center;
+  font-size: .9em;
+  font-weight: 700;
+  padding-top: 25px; }
+
 .anterior {
   grid-area: anterior; }
 
 .partidos-fecha {
+  padding: 15px 0;
   color: white;
   font-size: .9em;
-  justify-content: center;
-  align-content: center;
+  text-align: center;
   grid-area: partidos; }
 
 .partidos-fecha, a:link, a:visited, a:active {
@@ -88,6 +95,28 @@ main section {
 .goles {
   background-color: white;
   color: black; }
+
+#seccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden; }
+  #seccion .titulo {
+    font-size: 1.2em;
+    color: white;
+    font-family: "montserrat";
+    font-weight: 600;
+    text-align: center; }
+  #seccion p {
+    font-size: 1.2em;
+    color: white;
+    font-family: "montserrat";
+    font-weight: 400;
+    text-align: left;
+    padding: 30px;
+    letter-spacing: .4px; }
 
 aside {
   background-color: rgba(0, 0, 0, 0.5);
@@ -159,6 +188,12 @@ fieldset label span {
     text-align: center; }
   .relleno {
     width: 80%;
+    text-align: center; }
+  .container-main main section h2 {
+    font-size: 1.4em;
+    color: white;
+    font-family: "montserrat";
+    font-weight: 600;
     text-align: center; } }
 
 @media screen and (min-width: 1024px) {
@@ -171,7 +206,7 @@ fieldset label span {
     width: 100%; }
     .container-main main {
       width: 70%; }
-      .container-main main section table tr {
+      .container-main main section table tr, .container-main main section .goleadores tr, .container-main main section .asistencias tr {
         height: 150px; }
   aside {
     width: 30%; }

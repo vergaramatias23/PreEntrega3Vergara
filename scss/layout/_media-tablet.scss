@@ -11,4 +11,15 @@
       text-align: center; }
     .relleno {
       width: 80%;
-      text-align: center; } }
+      text-align: center; } 
+    .container-main{
+      main{
+        section{
+          h2{
+            @include font(1.4em, white, 'montserrat', 600, center);
+          }
+        }
+      }
+    }
+
+    }
