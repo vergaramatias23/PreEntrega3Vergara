@@ -48,6 +48,52 @@ header {
 
 .container-main {
   background-color: rgba(0, 0, 0, 0.5); }
+  .container-main main .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10px; }
+    .container-main main .botones .tabla, .container-main main .botones .reglas, .container-main main .botones .campeones, .container-main main .botones .ranking {
+      font-size: 0.6em;
+      color: white;
+      font-family: "montserrat";
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 2px;
+      background-color: #00206c;
+      padding: 1px; }
+      @media screen and (min-width: 768px) {
+        .container-main main .botones .tabla, .container-main main .botones .reglas, .container-main main .botones .campeones, .container-main main .botones .ranking {
+          font-size: 1em;
+          color: white;
+          font-family: "montserrat";
+          font-weight: 700;
+          text-align: center;
+          padding: 5px;
+          border-radius: 10px; } }
+    .container-main main .botones .tabla-lib, .container-main main .botones .reglas-lib, .container-main main .botones .ranking-lib, .container-main main .botones .campeones-lib {
+      font-size: 0.6em;
+      color: white;
+      font-family: "montserrat";
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 2px;
+      background-color: #8b5a00;
+      padding: 1px; }
+      @media screen and (min-width: 768px) {
+        .container-main main .botones .tabla-lib, .container-main main .botones .reglas-lib, .container-main main .botones .ranking-lib, .container-main main .botones .campeones-lib {
+          font-size: 1em;
+          color: white;
+          font-family: "montserrat";
+          font-weight: 700;
+          text-align: center;
+          padding: 5px;
+          border-radius: 10px; } }
   .container-main main section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -63,11 +109,28 @@ header {
       width: 90%;
       background-color: #121212;
       grid-area: tabla; }
+      .container-main main section table .cabeceras, .container-main main section .goleadores .cabeceras, .container-main main section .asistencias .cabeceras, .container-main main section table .partidos, .container-main main section .goleadores .partidos, .container-main main section .asistencias .partidos {
+        height: 10px;
+        padding: 15px; }
+        @media screen and (min-width: 768px) {
+          .container-main main section table .cabeceras, .container-main main section .goleadores .cabeceras, .container-main main section .asistencias .cabeceras, .container-main main section table .partidos, .container-main main section .goleadores .partidos, .container-main main section .asistencias .partidos {
+            height: 50px; } }
+      @media screen and (min-width: 768px) {
+        .container-main main section table .partidos .goles, .container-main main section .goleadores .partidos .goles, .container-main main section .asistencias .partidos .goles {
+          width: 25px; } }
       .container-main main section table tr .cabecera, .container-main main section .goleadores tr .cabecera, .container-main main section .asistencias tr .cabecera, .container-main main section table tr .cabecera-goleador, .container-main main section .goleadores tr .cabecera-goleador, .container-main main section .asistencias tr .cabecera-goleador {
+        font-size: 0.6em;
+        color: white;
+        font-family: "montserrat";
         font-weight: 500;
-        font-size: 1em;
-        text-align: center;
-        color: white; }
+        text-align: center; }
+        @media screen and (min-width: 768px) {
+          .container-main main section table tr .cabecera, .container-main main section .goleadores tr .cabecera, .container-main main section .asistencias tr .cabecera, .container-main main section table tr .cabecera-goleador, .container-main main section .goleadores tr .cabecera-goleador, .container-main main section .asistencias tr .cabecera-goleador {
+            font-size: 1em;
+            color: white;
+            font-family: "montserrat";
+            font-weight: 700;
+            text-align: center; } }
       .container-main main section table tr td, .container-main main section .goleadores tr td, .container-main main section .asistencias tr td {
         border: 1px solid #4d4d4d;
         color: white;

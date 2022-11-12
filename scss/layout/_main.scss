@@ -1,6 +1,64 @@
 .container-main{
     background-color: $background-color-principal;
     main{
+        .botones{
+            @include prop-flex(row,space-between,center);
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 10px;
+
+            .tabla{
+                @include font (.6em, white, 'montserrat', 700, center);
+                text-transform: uppercase;
+                margin: 2px;
+                background-color: rgb(0, 32, 108);
+                padding: 1px;
+                @include tablet{
+                    @include font (1em, white, 'montserrat', 700, center);
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+            }
+
+            .reglas{
+                @extend .tabla;
+            }
+
+            .campeones{
+                @extend .tabla;
+            }
+
+            .ranking{
+                @extend .tabla;
+            }
+
+            .tabla-lib{
+                @include font (.6em, white, 'montserrat', 700, center);
+                text-transform: uppercase;
+                margin: 2px;
+                background-color: rgb(139, 90, 0);
+                padding: 1px;
+                @include tablet{
+                    @include font (1em, white, 'montserrat', 700, center);
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+            }
+
+            .reglas-lib{
+                @extend .tabla-lib;
+            }
+
+            .ranking-lib{
+                @extend .tabla-lib;
+            }
+
+            .campeones-lib{
+                @extend .tabla-lib;
+            }
+        }
+
+
         section{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -22,12 +80,27 @@
                 width: 90%;
                 background-color: #121212;
                 grid-area: tabla;
+                .cabeceras{
+                    height: 10px;
+                    padding: 15px;
+                    @include tablet{
+                        height: 50px;
+                    }
+                }
+                .partidos{
+                    @extend .cabeceras;
+                    .goles{
+                        @include tablet{
+                            width: 25px;
+                        }
+                    }
+                }
                 tr{
                     .cabecera{
-                        font-weight: 500;
-                        font-size: 1em;
-                        text-align: center;
-                        color: white;
+                        @include font (.6em, white, 'montserrat', 500, center);
+                        @include tablet{
+                            @include font (1em, white, 'montserrat', 700, center);
+                        }
                     }
                     .cabecera-goleador{
                         @extend .cabecera;
@@ -57,7 +130,7 @@
         @extend .goleadores;
     }
 
-
+    
     .anterior{
         grid-area: anterior;
     }
